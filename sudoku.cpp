@@ -12,8 +12,6 @@ void WriteIntoFile(int FinalSudoku[][10], FILE*sudoku, int type, int &num, int*l
 void ChangeFinalSugouku(int FinalSudoku[][10], int &num, FILE*sudoku);
 int main(int argc, char * argv[])
 {
-	clock_t start, end;
-	start = clock();
 	if (argc != 3)				//参数数目不足，显示异常
 	{
 		cout << "Missing Parameter" << endl;
@@ -89,9 +87,6 @@ int main(int argc, char * argv[])
 	{
 		cout << "Parameter Error" << endl;					//输入未定义参数
 	}
-	end = clock();
-	double dur = (double)(end - start);
-	printf("Time:%f\n", (dur / CLOCKS_PER_SEC));
 
 	return 0;
 }
